@@ -12,9 +12,9 @@ function App() {
 
   const handleNetPriceChange = (price) => {
     const gross_price = price * ((vatRate / 100) + 1);
-    setNetPrice(price);
-    setGrossPrice(gross_price);
-    setVatToPay(gross_price - price);
+    setNetPrice(price.toFixed(2));
+    setGrossPrice(gross_price.toFixed(2));
+    setVatToPay((gross_price - price).toFixed(2));
   };
 
   const handleGrossPriceChange = (price) => {
