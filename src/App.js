@@ -15,7 +15,7 @@ function App() {
     setNetPrice(price);
     setGrossPrice(gross_price);
     const vtopay = gross_price - price;
-    setVatToPay(vtopay.fixed(2));
+    setVatToPay(vtopay.toFixed(2));
   };
 
   const handleGrossPriceChange = (price) => {
